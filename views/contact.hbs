@@ -1,0 +1,52 @@
+{{>header}}
+<title>Fitness Pro | Contact</title>
+{{>navbar}}
+<div class="container-fluid mt-2">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="background text-light text-center mb-2 p-2">Fitness Pro</div>
+            <div class="background text-light text-center mb-2 p-2">9873848046</div>
+            <div class="background text-light text-center mb-2 p-2">A-43, Fitness Pro, Sector 16,Noida,201301,India
+            </div>
+            <div class="background text-light text-center mb-2 p-2">fitnesspro@gmail.com</div>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="100%" height="440px" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=a-43%20ducat%20sector%2016%20noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <h5 class="background text-light text-center p-2">Contact Us</h5>
+            {{#if show}}
+            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                Thanks to Share Your Query With US!!!!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+            <form method="post" action="/contact">
+                <div class="mb-3">
+                    <label class="form-label">Name<span class="text-danger">*</span></label>
+                    <input type="text" name="name" required class="form-control" placeholder="Enter Your Name : ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email Address<span class="text-danger">*</span></label>
+                    <input type="email" name="email" required class="form-control" placeholder="Enter Email Address : ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone Number<span class="text-danger">*</span></label>
+                    <input type="text" required name="phone" class="form-control" placeholder="Enter Phone Number : ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subject<span class="text-danger">*</span></label>
+                    <input type="text" required name="subject" class="form-control" placeholder="Enter Subject : ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message<span class="text-danger">*</span></label>
+                    <textarea name="message" rows="6" required class="form-control"></textarea>
+                </div>
+                <button type="submit" required class="btn background text-light w-100 d-block btn-sm">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{>footer}}
